@@ -4,7 +4,7 @@
  * @Author: tangshuo
  * @Date: 2021-10-12 15:52:39
  * @LastEditors: tangshuo
- * @LastEditTime: 2021-10-12 17:27:24
+ * @LastEditTime: 2021-11-02 16:20:43
  */
 import { defineConfig } from 'umi';
 
@@ -20,9 +20,7 @@ export default defineConfig({
     locale: false
   },
   routes: [
-    { path: '/',  redirect: '/home' },
-    { path: '/home', name: '首页', icon: 'home', component: '@/pages/home/index'},
-    { path: '/other', name: '其他', icon: 'user', component: '@/pages/other/index'}
+    { exact:true, path: '/',  component: '@/pages/index' },
   ],
   fastRefresh: {},
   chainWebpack: function (config, { webpack }) {
